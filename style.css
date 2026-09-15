@@ -1,4 +1,13 @@
-body{background:#111;color:#fff;font-family:Arial;text-align:center;margin:0}header{padding:25px;border-bottom:1px solid #333}.hero{padding:100px 20px}h1{font-size:48px}.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}.cards div{background:#222;border:2px solid #d71920;padding:35px;width:180px}
+.hero 
+h1{
+display:none;
+}
+
+.hero 
+p{
+display:none;
+}body{background:#111;color:#fff;font-family:Arial;text-align:center;margin:0}header{padding:25px;border-bottom:1px 
+solid #333}.hero{padding:100px 20px}h1{font-size:48px}.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}.cards div{background:#222;border:2px solid #d71920;padding:35px;width:180px}
 .hero{
 background-image:url("images/banner-new.jpg");
 background-size:cover;
