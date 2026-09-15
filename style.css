@@ -1,16 +1,40 @@
 body{
 margin:0;
+font-family:Arial,Helvetica,sans-serif;
 background:#111;
 color:white;
-font-family:Arial;
+}
+
+
+/* header */
+
+header{
+background:#050505;
+padding:25px;
 text-align:center;
 }
 
-header{
-background:#111;
-padding:25px;
-border-bottom:1px solid #333;
+header b{
+font-size:22px;
 }
+
+
+/* nav */
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+font-size:15px;
+}
+
+
+
+/* hero */
 
 .hero{
 height:520px;
@@ -19,23 +43,56 @@ background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-justify-content:center;
+}
+
+
+.hero div{
+margin-left:60px;
+max-width:600px;
 }
 
 
 .hero h1{
-display:none;
+font-size:48px;
+line-height:1.2;
 }
 
 
 .hero p{
-display:none;
+font-size:20px;
+color:#ddd;
+}
+
+
+.hero span{
+color:#e52b25;
+}
+
+
+
+/* button */
+
+button{
+background:#e52b25;
+border:0;
+padding:15px 35px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+
+
+/* products */
+
+section{
+padding:50px;
 }
 
 
 .cards{
 display:flex;
-gap:20px;
+gap:25px;
 justify-content:center;
 flex-wrap:wrap;
 }
@@ -43,7 +100,18 @@ flex-wrap:wrap;
 
 .cards div{
 background:#222;
-border:2px solid #d71920;
-padding:35px;
-width:180px;
+padding:30px;
+width:220px;
+border:1px solid #333;
+text-align:center;
+}
+
+
+.cards h3{
+font-size:22px;
+}
+
+
+.cards p{
+color:#bbb;
 }
