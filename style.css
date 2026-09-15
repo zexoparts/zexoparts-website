@@ -1,12 +1,13 @@
 body{
+margin:0;
 background:#111;
-color:#fff;
+color:white;
 font-family:Arial;
 text-align:center;
-margin:0;
 }
 
 header{
+background:#111;
 padding:25px;
 border-bottom:1px solid #333;
 }
@@ -21,26 +22,28 @@ align-items:center;
 justify-content:center;
 }
 
+
 .hero h1{
-font-size:48px;
+display:none;
 }
 
+
 .hero p{
-font-size:20px;
+display:none;
 }
+
 
 .cards{
 display:flex;
 gap:20px;
 justify-content:center;
 flex-wrap:wrap;
-padding:40px;
 }
 
-.card{
+
+.cards div{
 background:#222;
 border:2px solid #d71920;
 padding:35px;
 width:180px;
-}}
-
+}
