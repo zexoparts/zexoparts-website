@@ -1,18 +1,18 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body{
-    font-family:
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif;
 
-    color:#111;
-    background:#fff;
+body{
+font-family:
+"Helvetica Neue",
+Arial,
+sans-serif;
+
+color:#111;
+background:#fff;
 }
 
 
@@ -20,128 +20,153 @@ body{
 
 header{
 
-    height:90px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+height:80px;
 
-    padding:0 80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 
-    background:#fff;
+padding:0 8%;
+
+background:#fff;
+
+border-bottom:1px solid #eee;
 
 }
 
 
 .logo{
 
-    font-size:32px;
-    font-weight:700;
-    letter-spacing:3px;
+font-size:34px;
+font-weight:800;
+letter-spacing:4px;
 
 }
 
 
 nav a{
 
-    margin-left:35px;
+margin-left:40px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    color:#111;
+color:#111;
 
-    font-size:15px;
+font-size:15px;
+
+letter-spacing:1px;
 
 }
+
+
+
 
 
 /* HERO */
 
 .hero{
 
-    height:620px;
+height:620px;
 
-    background:
-    linear-gradient(
-    rgba(0,0,0,.35),
-    rgba(0,0,0,.35)
-    ),
-    url("images/banner-new.jpg");
+background:
 
-    background-size:cover;
+linear-gradient(
+90deg,
+rgba(0,0,0,.65),
+rgba(0,0,0,.15)
+),
 
-    background-position:center;
+url("images/hero.jpg");
 
-    display:flex;
+background-size:cover;
 
-    align-items:center;
-
-    padding-left:90px;
-
-    color:white;
-
-}
+background-position:center;
 
 
-.hero h1{
+display:flex;
 
-    font-size:72px;
-
-    letter-spacing:4px;
-
-    margin-bottom:25px;
-
-}
+align-items:center;
 
 
-.hero p{
+padding:0 8%;
 
-    font-size:22px;
 
-    font-weight:500;
-
-    margin-bottom:40px;
+color:white;
 
 }
 
 
 
-button{
+.hero-content h1{
 
-    padding:16px 38px;
+font-size:64px;
 
-    margin-right:15px;
+font-weight:800;
 
-    border:none;
+letter-spacing:3px;
 
-    background:white;
-
-    color:#111;
-
-    font-size:16px;
+margin-bottom:25px;
 
 }
+
+
+
+.hero-content p{
+
+font-size:22px;
+
+letter-spacing:1px;
+
+margin-bottom:45px;
+
+}
+
+
+
+.buttons a{
+
+display:inline-block;
+
+padding:16px 35px;
+
+margin-right:15px;
+
+background:white;
+
+color:#111;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
 
 
 /* PRODUCTS */
 
-.products{
 
-    padding:90px 80px;
+#products{
 
-    background:#fafafa;
+padding:100px 8%;
+
+background:white;
 
 }
 
 
-.products h2{
 
-    text-align:center;
+#products h2{
 
-    font-size:42px;
+text-align:center;
 
-    letter-spacing:2px;
+font-size:44px;
 
-    margin-bottom:60px;
+letter-spacing:4px;
+
+margin-bottom:70px;
 
 }
 
@@ -149,12 +174,17 @@ button{
 
 .product-grid{
 
-    display:grid;
 
-    grid-template-columns:
-    repeat(5,1fr);
+display:grid;
 
-    gap:25px;
+grid-template-columns:repeat(5,1fr);
+
+gap:50px 30px;
+
+max-width:1200px;
+
+margin:auto;
+
 
 }
 
@@ -162,15 +192,15 @@ button{
 
 .product-card{
 
-    background:white;
 
-    border:1px solid #ddd;
+border-top:1px solid #111;
 
-    padding:35px 20px;
+padding-top:22px;
 
-    text-align:center;
+min-height:130px;
 
-    min-height:170px;
+transition:.3s;
+
 
 }
 
@@ -178,102 +208,134 @@ button{
 
 .product-card h3{
 
-    font-size:20px;
+font-size:20px;
 
-    margin-bottom:20px;
+font-weight:700;
+
+margin-bottom:15px;
+
 
 }
+
 
 
 .product-card p{
 
-    font-size:14px;
+font-size:14px;
 
-    color:#555;
+color:#555;
+
+line-height:1.6;
 
 }
+
+
+
+.product-card:hover{
+
+border-top:2px solid #b00000;
+
+}
+
+
 
 
 
 /* ABOUT */
 
-.about{
 
-    padding:90px 180px;
+#about,
+#contact{
 
-    text-align:center;
+
+padding:100px 15%;
+
+background:#f7f7f7;
+
+text-align:center;
+
 
 }
 
 
-.about h2,
-.quality h2,
-.contact h2{
+#about h2,
+#contact h2{
 
-    font-size:40px;
 
-    margin-bottom:30px;
+font-size:42px;
+
+letter-spacing:3px;
+
+margin-bottom:35px;
+
+
+}
+
+
+#about p,
+#contact p{
+
+
+font-size:17px;
+
+line-height:2;
+
+color:#444;
+
 
 }
 
 
 
-.about p,
-.quality p,
-.contact p{
-
-    line-height:2;
-
-    color:#555;
-
-}
-
-
-
-/* QUALITY */
-
-.quality{
-
-    background:#111;
-
-    color:white;
-
-    padding:80px;
-
-    text-align:center;
-
-}
-
-
-.quality p{
-
-    color:#ccc;
-
-}
-
-
-/* CONTACT */
-
-.contact{
-
-    padding:80px;
-
-    text-align:center;
-
-}
 
 
 /* FOOTER */
 
+
 footer{
 
-    background:#111;
+padding:35px;
 
-    color:#aaa;
+text-align:center;
 
-    text-align:center;
+background:#111;
 
-    padding:30px;
+color:white;
+
+font-size:14px;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+
+.product-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
 
 }
 
