@@ -7,22 +7,27 @@ box-sizing:border-box;
 body{
 font-family:Arial, Helvetica, sans-serif;
 color:#111;
+line-height:1.6;
 }
+
+
+/* HEADER */
 
 header{
 height:90px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 padding:0 80px;
-border-bottom:1px solid #eee;
+background:#fff;
 }
 
-.logo{
+
+header h1{
 font-size:36px;
-font-weight:800;
 letter-spacing:4px;
 }
+
 
 nav a{
 margin-left:40px;
@@ -32,10 +37,13 @@ font-size:16px;
 }
 
 
+
 /* HERO */
 
 .hero{
+
 height:620px;
+
 background:
 linear-gradient(
 90deg,
@@ -49,60 +57,119 @@ background-position:center;
 
 display:flex;
 align-items:center;
-}
 
-.hero-content{
 padding-left:80px;
+
 color:white;
+
 }
 
-.hero h1{
+
+.hero-content h2{
+
 font-size:64px;
-margin-bottom:25px;
+margin-bottom:20px;
+
 }
 
-.hero p{
+
+.hero-content p{
+
 font-size:22px;
-margin-bottom:40px;
+margin-bottom:35px;
+
 }
 
 
-.button{
-display:inline-block;
-padding:18px 35px;
-background:white;
-color:#111;
-text-decoration:none;
-margin-right:20px;
-font-weight:bold;
+.hero a{
+
+color:white;
+font-size:18px;
+margin-right:30px;
+
 }
 
 
 /* PRODUCTS */
 
 .products{
-padding:80px;
+
+padding:90px 80px;
+
 }
+
 
 .products h2{
-font-size:40px;
+
+font-size:42px;
 margin-bottom:40px;
+
 }
+
 
 .product-list{
-display:flex;
-gap:40px;
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
 }
 
+
 .product-item{
-font-size:20px;
+
+font-size:18px;
+padding:25px;
+border:1px solid #ddd;
+
 }
+
+
+
+/* ABOUT */
+
+.about{
+
+padding:90px 80px;
+
+}
+
+
+.about h2{
+
+font-size:42px;
+margin-bottom:30px;
+
+}
+
+
+
+/* CONTACT */
+
+.contact{
+
+padding:90px 80px;
+
+}
+
+
+.contact h2{
+
+font-size:42px;
+margin-bottom:30px;
+
+}
+
 
 
 /* FOOTER */
 
 footer{
+
 padding:40px;
+
 text-align:center;
+
 border-top:1px solid #eee;
+
 }
