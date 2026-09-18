@@ -34,10 +34,11 @@ header{
 /* Logo */
 
 .logo{
-    font-size:32px;
+    font-size:30px;
     font-weight:800;
     letter-spacing:3px;
     color:#111;
+    flex-shrink:0;
 }
 
 
@@ -46,7 +47,9 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:38px;
+    gap:34px;
+    flex-shrink:0;
+    white-space:nowrap;
 }
 
 nav a{
@@ -55,8 +58,8 @@ nav a{
     font-size:15px;
     font-weight:500;
     transition:.3s;
+    white-space:nowrap;
 }
-
 nav a:hover{
     color:#e60012;
 }
@@ -67,7 +70,6 @@ nav a:hover{
 ========================= */
 
 .hero{
-
     height:650px;
 
     background-image:url("images/banner-new.jpg");
@@ -111,15 +113,11 @@ nav a:hover{
 /* Hero content */
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
     max-width:720px;
-
+    margin-top:-20px;
 }
-
 
 /* small top text */
 
@@ -143,47 +141,32 @@ nav a:hover{
 /* Main title */
 
 .hero-content h1{
-
-    font-size:58px;
-
-    line-height:1.12;
-
-    letter-spacing:1px;
-
+    font-size:48px;
+    line-height:1.1;
+    letter-spacing:2px;
     font-weight:800;
-
-    margin-bottom:8px;
-
+    margin-bottom:14px;
 }
 
 
 /* Subtitle */
 
 .hero-content h2{
-
-    font-size:48px;
-
-    line-height:1.15;
-
+    font-size:42px;
+    line-height:1.18;
     font-weight:800;
-
-    margin-bottom:24px;
-
+    margin-bottom:22px;
 }
 
 
 /* paragraph */
 
 .hero-content p{
-
-    font-size:20px;
-
-    max-width:650px;
-
-    margin-bottom:30px;
-
+    font-size:18px;
+    line-height:1.6;
+    max-width:620px;
+    margin-bottom:28px;
 }
-
 
 /* Highlight Better Drive */
 
