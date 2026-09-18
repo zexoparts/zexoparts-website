@@ -18,12 +18,16 @@ body{
 
 header{
     height:96px;
+    width:100%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    gap:30px;
     padding:0 5.5%;
     background:#fff;
     border-bottom:1px solid #eee;
+    white-space:nowrap;
 }
 
 
