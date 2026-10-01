@@ -1019,3 +1019,11 @@ footer p{
     }
 
 }
+/* Remove the decorative red line */
+.hero-content::before{
+    display:none !important;
+}
+
+.hero-content::after{
+    display:none !important;
+}
