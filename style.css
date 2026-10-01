@@ -937,3 +937,85 @@ footer p{
     }
 
 }
+/* ===== HERO POSITION FIX ===== */
+
+.hero{
+    position:relative;
+    display:block;
+    height:620px;
+    padding:0;
+}
+
+.hero-content{
+    position:absolute;
+    left:7%;
+    top:50%;
+    transform:translateY(-50%);
+    width:620px;
+    max-width:620px;
+    margin:0;
+    text-align:left;
+}
+
+
+/* remove the old red line */
+.hero-content::before{
+    display:none !important;
+}
+
+
+.hero-content h1{
+    font-size:60px;
+    line-height:1;
+    margin:0 0 18px 0;
+    text-align:left;
+}
+
+
+.hero-content h2{
+    font-size:34px;
+    line-height:1.15;
+    margin:0 0 24px 0;
+    max-width:600px;
+    text-align:left;
+}
+
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.6;
+    max-width:580px;
+    margin:0 0 28px 0;
+    text-align:left;
+}
+
+
+.hero-content .btn{
+    display:inline-block;
+    margin:0;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+    .hero-content{
+        left:7%;
+        width:86%;
+        max-width:none;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content h2{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+}
