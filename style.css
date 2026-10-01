@@ -1052,3 +1052,46 @@ nav a{
     display:flex;
     align-items:center;
 }
+/* ===== NAVIGATION ALIGNMENT ===== */
+
+nav{
+    display:flex;
+    align-items:center;
+    height:40px;
+    margin-top:4px;
+}
+
+nav a{
+    display:flex;
+    align-items:center;
+    height:40px;
+    margin-left:35px;
+    padding:0;
+    line-height:40px;
+}
+
+
+/* keep the right side perfectly centered */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    height:40px;
+}
+
+.search-box,
+.language,
+.inquiry-btn{
+    height:40px;
+    display:flex;
+    align-items:center;
+}
+
+
+/* logo stays centered */
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
