@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZEXOPARTS | Product Detail</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ========================================
+   ZEXOPARTS PRODUCT DETAIL PAGE
+======================================== */
+
+.product-detail-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 70px 5%;
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 35px;
+}
+
+.breadcrumb a {
+    color: #555;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+
+/* PRODUCT MAIN */
+
+.product-main {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-main-image {
+    min-height: 520px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+}
+
+.product-main-image span {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* PRODUCT INFO */
+
+.product-info-detail {
+    padding: 15px 0;
+}
+
+.product-category-detail {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.product-info-detail h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+
+.product-intro {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* PRODUCT SPECIFICATIONS */
+
+.product-specs {
+    border-top: 1px solid #ddd;
+    margin-bottom: 35px;
+}
+
+.spec-row {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.spec-label {
+    color: #888;
+}
+
+.spec-value {
+    color: #222;
+}
+
+
+/* INQUIRY BUTTON */
+
+.inquiry-button {
+    display: inline-block;
+    background: #e52b25;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.inquiry-button:hover {
+    background: #111;
+}
+
+
+/* CONTENT SECTIONS */
+
+.detail-section {
+    border-top: 1px solid #ddd;
+    padding: 50px 0;
+}
+
+.detail-section h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.detail-section p {
+    max-width: 900px;
+    color: #666;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+
+/* APPLICATION TABLE */
+
+.application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.application-table th {
+    background: #111;
+    color: #fff;
+    padding: 14px;
+    text-align: left;
+}
+
+.application-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* QUALITY GRID */
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.quality-box {
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+.quality-box h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.quality-box p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* BOTTOM CTA */
+
+.detail-cta {
+    background: #111;
+    color: #fff;
+    padding: 60px 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.detail-cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.detail-cta p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.detail-cta a {
+    display: inline-block;
+    background: #e52b25;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 28px;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .product-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .product-main-image {
+        min-height: 380px;
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .product-detail-page {
+        padding: 45px 20px;
+    }
+
+    .product-info-detail h1 {
+        font-size: 30px;
+    }
+
+    .spec-row {
+        grid-template-columns: 130px 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+ZEXOPARTS
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<!-- PRODUCT DETAIL -->
+
+<section class="product-detail-page">
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+<a href="index.html">Home</a>
+
+<span>›</span>
+
+<a href="products.html">Products</a>
+
+<span>›</span>
+
+Tie Rod End
+
+</div>
+
+<!-- PRODUCT MAIN -->
+
+<div class="product-main">
+
+<!-- PRODUCT IMAGE -->
+
+<div class="product-main-image">
+
+<span>
+PRODUCT IMAGE
+</span>
+
+</div>
+
+<!-- PRODUCT INFORMATION -->
+
+<div class="product-info-detail">
+
+<div class="product-category-detail">
+STEERING SYSTEM
+</div>
+
+<h1>
+Tie Rod End
+</h1>
+
+<p class="product-intro">
+
+High precision steering component designed for reliable
+aftermarket applications and stable steering performance.
+
+</p>
+
+<div class="product-specs">
+
+<div class="spec-row">
+
+<div class="spec-label">
+Product No.
+</div>
+
+<div class="spec-value">
+ZEXO-STR-001
+</div>
+
+</div>
+
+<div class="spec-row">
+
+<div class="spec-label">
+OE Number
+</div>
+
+<div class="spec-value">
+To Be Confirmed
+</div>
+
+</div>
+
+<div class="spec-row">
+
+<div class="spec-label">
+Position
+</div>
+
+<div class="spec-value">
+Front
+</div>
+
+</div>
+
+<div class="spec-row">
+
+<div class="spec-label">
+Application
+</div>
+
+<div class="spec-value">
+Passenger Vehicles
+</div>
+
+</div>
+
+<div class="spec-row">
+
+<div class="spec-label">
+Category
+</div>
+
+<div class="spec-value">
+Steering System
+</div>
+
+</div>
+
+<div class="spec-row">
+
+<div class="spec-label">
+Brand
+</div>
+
+<div class="spec-value">
+ZEXOPARTS
+</div>
+
+</div>
+
+</div>
+
+<a href="contact.html" class="inquiry-button">
+
+REQUEST A QUOTATION →
+
+</a>
+
+</div>
+
+</div>
+
+<!-- DESCRIPTION -->
+
+<div class="detail-section">
+
+<h2>
+PRODUCT DESCRIPTION
+</h2>
+
+<p>
+
+ZEXOPARTS steering components are developed for
+aftermarket applications with a focus on dimensional
+accuracy, durability and reliable vehicle performance.
+
+The product is manufactured according to controlled
+production standards and is suitable for professional
+automotive parts distribution.
+
+</p>
+
+</div>
+
+<!-- VEHICLE APPLICATION -->
+
+<div class="detail-section">
+
+<h2>
+VEHICLE APPLICATION
+</h2>
+
+<table class="application-table">
+
+<tr>
+
+<th>
+Make
+</th>
+
+<th>
+Model
+</th>
+
+<th>
+Year
+</th>
+
+<th>
+Position
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Toyota
+</td>
+
+<td>
+Corolla
+</td>
+
+<td>
+2014–2019
+</td>
+
+<td>
+Front
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Toyota
+</td>
+
+<td>
+Camry
+</td>
+
+<td>
+2012–2017
+</td>
+
+<td>
+Front
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+To Be Confirmed
+</td>
+
+<td>
+To Be Confirmed
+</td>
+
+<td>
+To Be Confirmed
+</td>
+
+<td>
+Front
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- QUALITY -->
+
+<div class="detail-section">
+
+<h2>
+QUALITY & MANUFACTURING
+</h2>
+
+<div class="quality-grid">
+
+<div class="quality-box">
+
+<h3>
+Material Control
+</h3>
+
+<p>
+
+Controlled material selection and production
+processes for consistent product quality.
+
+</p>
+
+</div>
+
+<div class="quality-box">
+
+<h3>
+Dimensional Accuracy
+</h3>
+
+<p>
+
+Critical dimensions are controlled throughout
+the manufacturing process.
+
+</p>
+
+</div>
+
+<div class="quality-box">
+
+<h3>
+Final Inspection
+</h3>
+
+<p>
+
+Products are inspected before packaging and
+shipment according to quality requirements.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PACKAGING -->
+
+<div class="detail-section">
+
+<h2>
+PACKAGING
+</h2>
+
+<p>
+
+ZEXOPARTS products can be supplied with
+standard export packaging and customized
+private-label packaging according to customer
+requirements.
+
+</p>
+
+</div>
+
+<!-- CTA -->
+
+<div class="detail-cta">
+
+<h2>
+LOOKING FOR THIS PART?
+</h2>
+
+<p>
+
+Send us the OE number, vehicle model or
+required quantity.
+
+</p>
+
+<a href="contact.html">
+
+SEND INQUIRY →
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-content">
+
+<h2>
+ZEXOPARTS
+</h2>
+
+<p>
+Professional Automotive Components Supplier
+</p>
+
+<p>
+Steering · Suspension · Brake · Wheel Hub · Chassis
+</p>
+
+<p>
+© 2026 ZEXOPARTS. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
