@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,22 +8,253 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZEXOPARTS | Automotive Components</title>
+<title>ZEXOPARTS | Automotive Parts</title>
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+<style>
 
+/* ================================
+   ZEXOPARTS PRODUCT CATALOG
+================================ */
+
+.catalog-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 70px 5%;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalog-header h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.catalog-header p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* SEARCH */
+
+.product-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-filter button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.category-filter button:hover,
+.category-filter button.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.product-search input {
+    width: 260px;
+    padding: 11px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 13px;
+}
+
+/* PRODUCT GRID */
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.catalog-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    height: 220px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-placeholder {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-category {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.product-info p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #666;
+    margin: 4px 0;
+}
+
+.product-number {
+    margin-top: 12px !important;
+    font-size: 12px !important;
+    color: #222 !important;
+}
+
+.details-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: #e52b25;
+}
+
+/* INQUIRY */
+
+.catalog-inquiry {
+    margin-top: 80px;
+    padding: 55px 30px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.catalog-inquiry h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.catalog-inquiry p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.catalog-inquiry a {
+    display: inline-block;
+    background: #e52b25;
+    color: #fff;
+    padding: 13px 28px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 1100px) {
+
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .product-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-search input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .catalog-page {
+        padding: 50px 20px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-header h2 {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+
+</head>
 
 <body>
 
+<!-- HEADER -->
 
 <header>
 
 <div class="logo">
 ZEXOPARTS
 </div>
-
 
 <nav>
 
@@ -36,259 +268,577 @@ ZEXOPARTS
 
 </nav>
 
-
 </header>
 
-
+<!-- PAGE BANNER -->
 
 <section class="page-banner">
-
 
 <h1>
 AUTOMOTIVE COMPONENTS
 </h1>
 
-
 <p>
 Professional aftermarket parts supplier
 </p>
 
-
 </section>
 
+<!-- PRODUCT CATALOG -->
 
+<section class="catalog-page">
 
-
-<section class="products-page">
-
+<div class="catalog-header">
 
 <h2>
-PRODUCT RANGE
+PRODUCT CATALOG
 </h2>
 
-
-
-<div class="product-grid">
-
-
-
-<div class="product-card">
-
-<h3>
-Steering System
-</h3>
-
 <p>
-Tie Rod End<br>
-Rack End<br>
-Ball Joint<br>
-Steering Rack Components
+Professional automotive components for global aftermarket applications.
 </p>
 
 </div>
 
+<!-- FILTER + SEARCH -->
 
+<div class="product-tools">
 
+<div class="category-filter">
 
-<div class="product-card">
+<button class="active" onclick="filterProducts('all', this)">
+All
+</button>
 
-<h3>
-Suspension System
-</h3>
+<button onclick="filterProducts('steering', this)">
+Steering
+</button>
 
-<p>
-Control Arm<br>
-Stabilizer Link<br>
-Bushing<br>
-Shock Absorber Mount
-</p>
+<button onclick="filterProducts('suspension', this)">
+Suspension
+</button>
 
-</div>
+<button onclick="filterProducts('brake', this)">
+Brake
+</button>
 
-
-
-
-
-<div class="product-card">
-
-<h3>
-Brake System
-</h3>
-
-<p>
-Brake Disc<br>
-Brake Pad<br>
-Brake Caliper Parts<br>
-Brake Hardware
-</p>
-
-</div>
-
-
-
-
-
-<div class="product-card">
-
-<h3>
+<button onclick="filterProducts('bearing', this)">
 Wheel Hub & Bearing
-</h3>
+</button>
 
-<p>
-Wheel Hub Assembly<br>
-Bearing Unit<br>
-ABS Sensor Hub
-</p>
+<button onclick="filterProducts('chassis', this)">
+Chassis
+</button>
 
 </div>
 
+<div class="product-search">
 
+<input
+type="text"
+id="productSearch"
+placeholder="Search product..."
+onkeyup="searchProducts()"
 
+>
 
+</div>
 
+</div>
 
-<div class="product-card">
+<!-- PRODUCTS -->
+
+<div class="catalog-grid" id="productGrid">
+
+<!-- PRODUCT 01 -->
+
+<div class="catalog-card" data-category="steering">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Steering System
+</div>
 
 <h3>
-Chassis Components
+Tie Rod End
 </h3>
 
 <p>
-Cross Member<br>
-Structural Parts<br>
-Mounting Components
+High precision steering component for passenger vehicles.
 </p>
 
-</div>
-
-
-
-
-
-
-<div class="product-card">
-
-<h3>
-Engine Components
-</h3>
-
-<p>
-Engine Mount<br>
-Cooling Parts<br>
-Automotive Sensors
+<p class="product-number">
+Product No.: ZEXO-STR-001
 </p>
 
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section class="vehicle">
-
-
-<h2>
-VEHICLE APPLICATION
-</h2>
-
-
-<div class="vehicle-grid">
-
-
-<div>Toyota</div>
-
-<div>Honda</div>
-
-<div>Nissan</div>
-
-<div>Hyundai</div>
-
-<div>Kia</div>
-
-<div>Volkswagen</div>
-
-<div>Ford</div>
-
-<div>BMW</div>
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="inquiry">
-
-
-<h2>
-OE NUMBER INQUIRY
-</h2>
-
-
-<p>
-
-Send OE number or vehicle information.
-Our team will provide matching parts.
-
-</p>
-
-
-<a href="contact.html">
-
-Request Quotation →
-
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
 </a>
 
+</div>
+
+</div>
+
+<!-- PRODUCT 02 -->
+
+<div class="catalog-card" data-category="steering">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Steering System
+</div>
+
+<h3>
+Rack End
+</h3>
+
+<p>
+Durable steering rack component for aftermarket applications.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-STR-002
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 03 -->
+
+<div class="catalog-card" data-category="suspension">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Suspension System
+</div>
+
+<h3>
+Stabilizer Link
+</h3>
+
+<p>
+Precision suspension component designed for stable vehicle handling.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-SUS-001
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 04 -->
+
+<div class="catalog-card" data-category="suspension">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Suspension System
+</div>
+
+<h3>
+Control Arm
+</h3>
+
+<p>
+Heavy-duty suspension control component for global applications.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-SUS-002
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 05 -->
+
+<div class="catalog-card" data-category="brake">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Brake System
+</div>
+
+<h3>
+Brake Disc
+</h3>
+
+<p>
+High quality braking component manufactured for aftermarket use.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-BRK-001
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 06 -->
+
+<div class="catalog-card" data-category="brake">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Brake System
+</div>
+
+<h3>
+Brake Pad
+</h3>
+
+<p>
+Reliable friction material for passenger and commercial vehicles.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-BRK-002
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 07 -->
+
+<div class="catalog-card" data-category="bearing">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Wheel Hub & Bearing
+</div>
+
+<h3>
+Wheel Hub Assembly
+</h3>
+
+<p>
+Precision wheel hub assembly with high dimensional accuracy.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-WHB-001
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 08 -->
+
+<div class="catalog-card" data-category="bearing">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Wheel Hub & Bearing
+</div>
+
+<h3>
+Wheel Bearing Unit
+</h3>
+
+<p>
+High precision bearing unit for wheel hub applications.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-WHB-002
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 09 -->
+
+<div class="catalog-card" data-category="chassis">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Chassis Components
+</div>
+
+<h3>
+Chassis Mount
+</h3>
+
+<p>
+Durable mounting component for chassis applications.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-CHA-001
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 10 -->
+
+<div class="catalog-card" data-category="chassis">
+
+<div class="product-image">
+
+<div class="product-placeholder">
+PRODUCT IMAGE
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Chassis Components
+</div>
+
+<h3>
+Cross Member Component
+</h3>
+
+<p>
+Structural chassis component for selected vehicle applications.
+</p>
+
+<p class="product-number">
+Product No.: ZEXO-CHA-002
+</p>
+
+<a href="contact.html" class="details-btn">
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- INQUIRY -->
+
+<div class="catalog-inquiry">
+
+<h2>
+CAN'T FIND THE PART YOU NEED?
+</h2>
+
+<p>
+Send us the OE number, vehicle model or product information.
+</p>
+
+<a href="contact.html">
+REQUEST A QUOTATION →
+</a>
+
+</div>
 
 </section>
 
-
-
-
+<!-- FOOTER -->
 
 <footer>
 
-
 <div class="footer-content">
-
 
 <h2>
 ZEXOPARTS
 </h2>
 
-
 <p>
 Professional Automotive Components Supplier
 </p>
-
 
 <p>
 Steering · Suspension · Brake · Wheel Hub · Chassis
 </p>
 
-
 <p>
 © 2026 ZEXOPARTS. All Rights Reserved.
 </p>
 
-
 </div>
-
 
 </footer>
 
+<!-- FILTER SCRIPT -->
 
+<script>
+
+function filterProducts(category, button) {
+
+const cards = document.querySelectorAll('.catalog-card');
+
+const buttons = document.querySelectorAll('.category-filter button');
+
+buttons.forEach(btn => {
+btn.classList.remove('active');
+});
+
+button.classList.add('active');
+
+cards.forEach(card => {
+
+if (category === 'all' || card.dataset.category === category) {
+
+card.style.display = 'block';
+
+} else {
+
+card.style.display = 'none';
+
+}
+
+});
+
+}
+
+
+function searchProducts() {
+
+const search = document
+.getElementById('productSearch')
+.value
+.toLowerCase();
+
+const cards = document.querySelectorAll('.catalog-card');
+
+cards.forEach(card => {
+
+const text = card.innerText.toLowerCase();
+
+if (text.includes(search)) {
+
+card.style.display = 'block';
+
+} else {
+
+card.style.display = 'none';
+
+}
+
+});
+
+}
+
+</script>
 
 </body>
 
